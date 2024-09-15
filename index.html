@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <script src="cart.js"></script>
+
+  <title>philato</title>
+</head>
+
+<body>
+  <!--navbar-->
+
+
+  <div class="container-fluid px-0">
+    <nav class="navbar shadow navbar-expand-lg px-5 navbar-dark bg-dark mx-0">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-1 fw-bold text-uppercase" href="#" style="letter-spacing: 3px;">philato</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto fs-4">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./C.HTML">NPDA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cart.html">CART</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#BLOG">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+
+  <!--carousel-->
+  <section class="slider" id="home">
+    <div class="SLIDER">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image section/img 1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image section/img2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image section/img3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <!--services section -->
+  <div class="containerr">
+    <h2>Our Features</h2>
+    <div class="services-container d-flex justify-content-around flex-wrap">
+      <div class="Box">
+
+        <a href="#chatbot" class="text-light" style="text-decoration: none;">AGI Based chatbot</a>
+      </div>
+
+      <div class="Box">
+
+        <a href="./C.HTML" class="text-light" style="text-decoration: none;">NPDA</a>
+      </div>
+
+      <div class="Box">
+
+        <a href="#BLOG" class="text-light" style="text-decoration: none;">BLOG</a>
+      </div>
+
+      <div class="Box">
+
+        <a href="https://www.indiapost.gov.in/Philately/Pages/Content/StampCalendar.aspx" class="text-light" style="text-decoration: none;">Cancellation Releases</a>
+      </div>
+
+      <div class="Box">
+
+        <a href="https://www.youtube.com/results?search_query=education+about+philatic" class="text-light" style="text-decoration: none;">Education</a>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+  <hr>
+  <!--stamps section-->
+  <div class="stampbar">
+    <h1>stamps</h1>
+    <div class="searchbar">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <hr>
+
+  <!--cards section-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card" style="width: 18rem;">
+          <img style=" height:250px;" src="image section/111.jpg" class="card-img-top" alt="Stamp 1">
+          <div class="card-body">
+            <h5 class="card-title">INDIA STAMP 2024–XXXIII Olympics Paris 2024</h5>
+            <p class="card-text">India Post issued a Souvenir Sheet on XXXIII Olympics Paris 2024 MINT STAMPS–Theme
+              Sports, Games, Table Tennis </p>
+            <hr>
+            <p><s>₹60.00</s> ₹24.00</p>
+            <button class="btn btn-primary add-to-cart" data-id="1"
+              data-name="INDIA STAMP 2024–XXXIII Olympics Paris 2024" data-price="60">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card" style="width: 18rem;">
+          <img style=" height:250px;"
+            src="image section/31-01-2024-The-Bombay-Sappers-War-Memorial-India-postage-Stamp-600x525.jpg"
+            class="card-img-top" alt="Stamp 1">
+          <div class="card-body">
+            <h5 class="card-title"> THE BOMBAY SAPPERS WAR MEMORIAL</h5>
+            <p class="card-text">INDIA STAMP 2024 – THE BOMBAY SAPPERS WAR MEMORIAL MINT STAMPS – MILITARY, WAR
+              MEMORIAL, ARMY THEME </p>
+            <hr>
+            <p><s>₹65.00</s> ₹35.00</p>
+            <button class="btn btn-primary add-to-cart" data-id="2" data-name="THE BOMBAY SAPPERS WAR MEMORIAL"
+              data-price="35">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card" style="width: 18rem;">
+          <img style=" height:250px;" src="image section/All-India-Railway-Mans-Federation-ostage-stamp.png"
+            class="card-img-top" alt="Stamp 1">
+          <div class="card-body">
+            <h5 class="card-title">INDIA STAMP 2024 <br> .</h5>
+            <p class="card-text">INDIA STAMP 2024 – All India Railwaymen’s Federation Stamps Railway, Railways, Train
+              Theme <br>.</p>
+            <hr>
+            <p><s>₹45.00</s> ₹26.00</p>
+            <button class="btn btn-primary add-to-cart" data-id="3"
+              data-name="All India Railwaymen’s Federation Stamps Railway" data-price="26">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card" style="width: 18rem;">
+          <img style=" height:250px;" src="image section/supreme court.jpg" class="card-img-top" alt="Stamp 1">
+          <div class="card-body">
+            <h5 class="card-title">Supreme Court of India - 75 Years</h5>
+            <p class="card-text">INDIA STAMP 2024 - Supreme Court 75 Years - court theme <br>.<br>. </p>
+            <hr>
+            <p> ₹05.00</p>
+            <button class="btn btn-primary add-to-cart" data-id="4" data-name="Supreme Court of India - 75 Years"
+              data-price="05">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card" style="width: 18rem;">
+          <img style=" height:250px;" src="image section/IND18-24-1.jpg" class="card-img-top" alt="Stamp 1">
+          <div class="card-body">
+            <h5 class="card-title">KARGIL VIJAY DIWAS SILVER JUBILEE 2024 MINT STAMPS</h5>
+            <p class="card-text">NDIA STAMP 2024 – KARGIL VIJAY DIWAS SILVER JUBILEE 2024 MINT STAMPS THEME
+              MILITARY,WAR,DEFENCE</p>
+            <hr>
+            <p><s> ₹50.00</s> ₹25.00</p>
+            <button class="btn btn-primary add-to-cart" data-id="5"
+              data-name="KARGIL VIJAY DIWAS SILVER JUBILEE 2024 MINT STAMPS" data-price="25">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card" style="width: 18rem;">
+          <img style=" height:250px;" src="image section/chunabv stamp.jpg" class="card-img-top" alt="Stamp 1">
+          <div class="card-body">
+            <h5 class="card-title">Inclusive Elections- Election Commission of India postage stamp</h5>
+            <p class="card-text">INDIA STAMP 2024 – Inclusive Elections – Election Commission of India Stamps – Mint
+              Stamps</p>
+            <hr>
+            <p><s>₹40.00</s>₹35.00</p>
+            <button class="btn btn-primary add-to-cart" data-id="1" data-name="Stamp 1" data-price="10">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <script>
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const itemId = button.dataset.id;
+        const itemName = button.dataset.name;
+        const itemPrice = button.dataset.price;
+        addItemToCart(itemId, itemName, itemPrice);
+      });
+    });
+  </script>
+  <!---blog section-->
+  <SECTION class="BLOGSECTION" id="BLOG">
+    <hr>
+    <div class="headingimg">
+      <img src="image section/philatelis blog.png" alt="">
+    </div>
+    <hr>
+    <div class="philatelist-post" style="margin-left:10%">
+
+      <div class="cardcontent">
+        <div class="philatelist-info">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Photo">
+          <h6>John Doe</h6>
+        </div>
+        <h2>Most Valuable Postage Stamps of India </h2>
+        <p>India always had a vast and rich history due to the cultural diversity present in it. This diversity was well
+          reflected in everything, be it clothes, traditions, or languages. In order to capture the tale of this
+          diversity, India has produced many masterpieces; some of them include the stamps of India. These stamps were a
+          way to tell the ancient tale and which is why they also contain some of the very rare and the most valuable
+          postage stamps of India.</p>
+        <div class="status">
+          <p>15 sep 2024</p>
+          <button class="read-btn">read more</button>
+        </div>
+        <div class="interaction-icons">
+          <i class="fas fa-thumbs-up"></i>
+          <i class="fas fa-comment"></i>
+        </div>
+      </div>
+      <div class="cardcontentimg">
+        <img src="image section/cover-7-472x270.jpg" alt="">
+      </div>
+
+    </div>
+    <div class="philatelist-post" style="margin-left: 25%;">
+      <div class="cardcontentimg">
+        <img src="image section/India-Republic-of-Korea-Joint-Issue-MS (1) copy.jpg" alt="">
+      </div>
+      <div class="cardcontent">
+        <div class="philatelist-info">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Photo">
+          <h6>kabir</h6>
+        </div>
+        <h2>India – Korea Joint Issue MS Miniature sheet </h2>
+        <p>India – Korea Joint Issue MS India Republic of Korea Joint Issue MS Miniature sheet stamp. The stamp is
+          easily available at any philately counter of Indian postal office. Stamp Price Rs: 30.00 India Post issued a
+          set of two commemorative postage stamps of denominations Rs.5 and Rs.25 as India Republic of Korea Joint Issue
+          on 30.07.2019.</p>
+        <div class="status">
+          <p>30 july 2019</p>
+          <button class="read-btn">read more</button>
+        </div>
+        <div class="interaction-icons">
+          <i class="fas fa-thumbs-up"></i>
+          <i class="fas fa-comment"></i>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="philatelist-post" style="margin-left:10%">
+
+      <div class="cardcontent">
+        <div class="philatelist-info">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Photo">
+          <h6>jai </h6>
+        </div>
+        <h2>BAPU JANAMDIN</h2>
+        <p>A set of seven Commemorative Postage Stamps on 150th Birth Anniversary of Mahatma Gandhi has been released on
+          02.10.2018</p>
+        <div class="status">
+          <p>20 sep 2024</p>
+          <button class="read-btn">read more</button>
+        </div>
+        <div class="interaction-icons">
+          <i class="fas fa-thumbs-up"></i>
+          <i class="fas fa-comment"></i>
+        </div>
+      </div>
+      <div class="cardcontentimg">
+        <img src="image section/111-9.jpg" alt="">
+      </div>
+
+    </div>
+    <div class="philatelist-post" style="margin-left: 25%;">
+      <div class="cardcontentimg">
+        <img src="image section/111-8 (2).jpg" alt="">
+      </div>
+      <div class="cardcontent">
+        <div class="philatelist-info">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Photo">
+          <h6>shurti</h6>
+        </div>
+        <h2>Rajputana Rifles </h2>
+        <p>A Commemorative Postage Stamp on 3rd Battalion The Rajputana Rifles has been released on 03.11.2018</p>
+        <div class="status">
+          <p>20 sep 2024</p>
+          <button class="read-btn">read more</button>
+        </div>
+        <div class="interaction-icons">
+          <i class="fas fa-thumbs-up"></i>
+          <i class="fas fa-comment"></i>
+        </div>
+      </div>
+    </div>
+    <div class="philatelist-post" style="margin-left:10%">
+
+      <div class="cardcontent">
+        <div class="philatelist-info">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Photo">
+          <h6>sagar</h6>
+        </div>
+        <h2>Stamps of India</h2>
+        <p>India boasts a rich and diverse history of postage stamps, reflecting the nation’s cultural heritage and
+          historical milestones. The first postage stamp of India, known as the “Scinde Dawk,” was issued in the Sindh
+          region in 1852. However, it wasn’t until 1854 that the first official postage stamp of British India, the
+          “India Postage,” was released.</p>
+        <div class="status">
+          <p>20 aug 2024</p>
+          <button class="read-btn">read more</button>
+        </div>
+        <div class="interaction-icons">
+          <i class="fas fa-thumbs-up"></i>
+          <i class="fas fa-comment"></i>
+        </div>
+      </div>
+      <div class="cardcontentimg">
+        <img src="image section/54.webp" alt="">
+      </div>
+
+    </div>
+    <div class="philatelist-post" style="margin-left: 25%;">
+      <div class="cardcontentimg">
+        <img src="image section/10-Indian-Tribal-Art-Forms-12.png" alt="">
+      </div>
+      <div class="cardcontent">
+        <div class="philatelist-info">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Photo">
+          <h6>snehal</h6>
+        </div>
+        <h2>The Fascinating World of Indian Post Stamps </h2>
+        <p>Indian Post Stamps are more than just a means of postage; they are miniature works of art that capture the
+          essence of India’s rich history, culture, and achievements. From iconic landmarks to notable personalities,
+          each stamp tells a unique story.</p>
+        <div class="status">
+          <p>sep 21 2024</p>
+          <button class="read-btn">read more</button>
+        </div>
+        <div class="interaction-icons">
+          <i class="fas fa-thumbs-up"></i>
+          <i class="fas fa-comment"></i>
+        </div>
+      </div>
+
+
+    </div>
+  </SECTION>
+
+  <!--footer-->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-us">About Us</a></li>
+          <li><a href="/forms">Forms</a></li>
+          <li><a href="/recruitments">Recruitments</a></li>
+          <li><a href="/holidays">Holidays</a></li>
+          <li><a href="/feedback">Feedback</a></li>
+          <li><a href="/flight-information">Flight Information</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h2>Resources</h2>
+        <ul>
+          <li><a href="/tenders-india">Tenders India</a></li>
+          <li><a href="/related-sites">Related Sites</a></li>
+          <li><a href="/website-policies">Website Policies</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+          <li><a href="/employee-corner">Employee Corner</a></li>
+          <li><a href="/sitemap">Sitemap</a></li>
+          <li><a href="/help">Help</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h2>Government Resources</h2>
+        <ul>
+          <li><a href="https://nvsp.in/">National Voter's Service Portal</a></li>
+          <li><a href="https://indiacode.gov.in/">India Code</a></li>
+          <li><a href="https://www.cert-in.org.in/application-security-audit-report/">Application Security Audit
+              Report</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h2>Social Media</h2>
+        <ul>
+          <li><a href="https://www.facebook.com/PostOffice.IN/"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/IndiaPostOffice?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/indiapost_dop/?hl=en"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/indiapost_dop"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h2>India.gov.in</h2>
+        <img src="india-gov-in-logo.png" alt="India.gov.in">
+        <a href="https://india.gov.in">Visit India.gov.in</a>
+      </div>
+    </div>
+    <p>&copy; 2024 Your Organization</p>
+  </footer>
+</body>
+<!--script for add to cart logic -->
+<section id="chatbot">
+<script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/3acd9827-4ef3-40da-a7af-ca8ba24ffc46/webchat/v2.1/config.js"></script>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

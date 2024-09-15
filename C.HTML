@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Philatelist Deposit Account (NPDA)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .npda-section {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-section {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .account-options button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .account-options button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+
+        .order-form-section {
+            padding: 20px;
+            background-color: #ffffff;
+            max-width: 100%;
+            margin: 30px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .order-table th,
+        .order-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .order-table th {
+            background-color: #f4f4f4;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+                box-shadow: none;
+            }
+
+            .account-options button {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .order-form-section,
+            .form-section {
+                padding: 10px;
+            }
+
+            .order-table th,
+            .order-table td {
+                padding: 5px;
+                font-size: 12px;
+            }
+        }
+
+        .npda-footer {
+            background-color: #006633;
+            /* Green */
+            color: #fff;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo img {
+            height: 50px;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-nav ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-contact h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-social h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-social ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .footer-social ul li {
+            margin: 0 5px;
+        }
+
+        .footer-social ul li a {
+            color: #0e0e0e;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer-nav ul {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid px-0">
+        <nav class="navbar shadow navbar-expand-lg px-5 navbar-dark bg-dark mx-0">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-1 fw-bold text-uppercase" href="#" style="letter-spacing: 3px;">philato</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fs-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./C.HTML">NPDA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cart.html">CART</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">POST</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <section class="npda-section">
+        <div class="container">
+            <h1>National Philatelist Deposit Account (NPDA)</h1>
+            <div class="account-options">
+                <button onclick="showForm('login')">Log In</button>
+                <button onclick="showForm('create')">Create an Account</button>
+            </div>
+
+            <!-- Log In Form -->
+            <form id="login-form" class="form-section" style="display:none;">
+                <h2>Log In</h2>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+
+            <!-- Create Account Form -->
+            <form id="create-account-form" class="form-section" style="display:none;">
+                <h2>Create an Account</h2>
+
+                <div class="form-group">
+                    <label>Type of Customer:</label>
+                    <input type="radio" id="private-individual" name="customer-type" value="private-individual"
+                        required>
+                    <label for="private-individual">Private Individual</label>
+                    <input type="radio" id="stamp-dealer" name="customer-type" value="stamp-dealer">
+                    <label for="stamp-dealer">Stamp Dealer / Shop</label>
+                    <input type="radio" id="company" name="customer-type" value="company">
+                    <label for="company">Company</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name of Applicant:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="pin">PIN:</label>
+                    <input type="text" id="pin" name="pin" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subscription-name">Subscription in the Name of:</label>
+                    <input type="text" id="subscription-name" name="subscription-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="frequency">Frequency of Supply:</label>
+                    <select id="frequency" name="frequency" required>
+                        <option value="once">Once a Year</option>
+                        <option value="twice">Twice a Year</option>
+                        <option value="four">Four Times a Year</option>
+                        <option value="six">Six Times a Year</option>
+                    </select>
+                </div>
+
+                <section class="order-form-section">
+                    <div class="container">
+                        <h2>Order Form</h2>
+                        <form id="order-form">
+                            <!-- Order Items Section -->
+                            <table class="order-table">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mint Commemorative Stamps</td>
+                                        <td><input type="number" name="mint_commemorative_stamps" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mint Commemorative Stamps without Personality Series</td>
+                                        <td><input type="number" name="mint_commemorative_stamps_without_personality"
+                                                min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mint Definitive Stamps</td>
+                                        <td><input type="number" name="mint_definitive_stamps" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Top Marginal Block of 4</td>
+                                        <td><input type="number" name="top_marginal_block_of_4" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bottom Marginal Block of 4</td>
+                                        <td><input type="number" name="bottom_marginal_block_of_4" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Full Sheet</td>
+                                        <td><input type="number" name="full_sheet" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>First Day Covers affixed with Stamp and Cancelled</td>
+                                        <td><input type="number" name="first_day_covers_affixed_with_stamp" min="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>First Day Covers without Personality Series</td>
+                                        <td><input type="number" name="first_day_covers_without_personality" min="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>First Day Covers - Blank</td>
+                                        <td><input type="number" name="first_day_covers_blank" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Information Brochure - Affixed with Stamp and Cancelled</td>
+                                        <td><input type="number" name="info_brochure_stamp_cancelled" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Information Brochure - Blank</td>
+                                        <td><input type="number" name="info_brochure_blank" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Annual Stamp Pack</td>
+                                        <td><input type="number" name="annual_stamp_pack" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Special Annual Stamp Pack of Personalities Only</td>
+                                        <td><input type="number" name="special_annual_stamp_pack" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Children’s Special Annual Stamp Pack</td>
+                                        <td><input type="number" name="children_special_stamp_pack" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Special Collector's Stamp Pack (Thematics) for Gifts</td>
+                                        <td><input type="number" name="collector_stamp_pack_thematics" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>First Day Cover Pack (Annual Thematic)</td>
+                                        <td><input type="number" name="first_day_cover_pack_thematic" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Postal Stationery (From limited seven bureau only: Delhi, Calcutta, Mumbai,
+                                            Chennai, Bangalore, Hyderabad, Ahmedabad)</td>
+                                        <td><input type="number" name="postal_stationery" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mini Sheet Souvenir Sheet</td>
+                                        <td><input type="number" name="mini_sheet_souvenir_sheet" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Any Other Item</td>
+                                        <td>
+                                            <input type="text" name="other_item_description"
+                                                placeholder="Describe Item">
+                                            <input type="number" name="other_item_quantity" min="0">
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <div class="form-group">
+                                <label for="date">Date:</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="signature">Upload Signature:</label>
+                                <input type="file" id="signature" name="signature" accept="image/*" required>
+                            </div>
+
+
+                            <button type="submit" class="submit-btn">Submit Order</button>
+                        </form>
+                    </div>
+                </section>
+
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
+        </div>
+    </section>
+    <div class="footer-contact">  
+
+        <h3>Contact  Us</h3>
+        <p>Address: Indian Postal Department, New Delhi</p>
+        <p>Phone: +91 1234567890</p>
+        <p>Email: npda@indianpost.gov.in</p>
+    </div>
+    <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul>
+            <li><a href="https://www.facebook.com/PostOffice.IN/"><i class="bi bi-facebook"></i></a></li>
+            <li><a href="https://twitter.com/IndiaPostOffice?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                        class="bi bi-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/indiapost_dop/?hl=en"><i class="bi bi-instagram"></i></a></li>
+        </ul>
+    </div>
+    </div>
+    </footer>
+
+    <script>
+        function showForm(formType) {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('create-account-form').style.display = 'none';
+
+            if (formType === 'login') {
+                document.getElementById('login-form').style.display = 'block';
+            } else if (formType === 'create') {
+                document.getElementById('create-account-form').style.display = 'block';
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
